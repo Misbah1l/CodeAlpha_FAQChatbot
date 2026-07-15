@@ -199,6 +199,8 @@ Login Screen
 <img width="1665" height="935" alt="image" src="https://github.com/user-attachments/assets/3185639e-cbe9-4135-87a3-5d9746f56a9c" />
 
 
+<img width="1899" height="857" alt="image" src="https://github.com/user-attachments/assets/c20573da-d725-4619-ab00-a83b501691a8" />
+
 
 
 ---
