@@ -1,0 +1,306 @@
+/* =====================================
+   Tablet (992px and below)
+===================================== */
+
+@media (max-width:992px){
+
+
+    .sidebar{
+
+        width:220px;
+
+    }
+
+
+
+    .chat-area{
+
+        padding:20px 8%;
+
+    }
+
+
+
+    .input-wrapper{
+
+        width:85%;
+
+    }
+
+
+
+    .welcome h1{
+
+        font-size:28px;
+
+    }
+
+
+
+    .bubble{
+
+        max-width:85%;
+
+    }
+
+
+}
+
+
+
+
+
+
+/* =====================================
+   Mobile (768px and below)
+===================================== */
+
+@media (max-width:768px){
+
+
+
+    .app-container{
+
+
+        flex-direction:column;
+
+
+    }
+
+
+
+
+    .sidebar{
+
+
+        width:100%;
+
+        height:auto;
+
+        min-height:70px;
+
+
+        flex-direction:column;
+
+
+        padding:10px 15px;
+
+
+    }
+
+
+
+
+    .history{
+
+
+        display:none;
+
+
+    }
+
+
+
+
+    .logo span{
+
+
+        font-size:18px;
+
+
+    }
+
+
+
+
+    .new-chat-btn{
+
+
+        width:auto;
+
+
+        padding:10px 15px;
+
+
+        font-size:14px;
+
+
+    }
+
+
+
+
+    .profile-box{
+
+
+        display:none;
+
+
+    }
+
+
+
+
+    .main{
+
+
+        width:100%;
+
+
+    }
+
+
+
+
+    .chat-area{
+
+
+        padding:15px;
+
+
+    }
+
+
+
+
+    .welcome h1{
+
+
+        font-size:24px;
+
+
+    }
+
+
+
+
+    .suggestions{
+
+
+        grid-template-columns:1fr;
+
+
+    }
+
+
+
+
+    .input-wrapper{
+
+
+        width:95%;
+
+
+        margin:10px auto;
+
+
+    }
+
+
+
+
+    .bubble{
+
+
+        max-width:90%;
+
+
+        font-size:14px;
+
+
+    }
+
+
+
+}
+
+
+
+
+
+
+/* =====================================
+   Small Mobile (480px and below)
+===================================== */
+
+@media (max-width:480px){
+
+
+
+    .welcome h1{
+
+
+        font-size:20px;
+
+
+    }
+
+
+
+
+
+    .input-wrapper input{
+
+
+        font-size:14px;
+
+
+    }
+
+
+
+
+    #send-btn{
+
+
+        width:34px;
+
+        height:34px;
+
+
+    }
+
+
+
+
+
+    .bubble{
+
+
+        padding:10px 12px;
+
+
+        font-size:13px;
+
+
+    }
+
+
+
+
+
+    .avatar{
+
+
+        width:30px;
+
+        height:30px;
+
+
+    }
+
+
+
+
+
+    .footer{
+
+
+        font-size:11px;
+
+
+    }
+
+
+
+}

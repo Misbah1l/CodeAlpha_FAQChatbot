@@ -1,0 +1,460 @@
+/* ==========================================
+   Messages Container
+========================================== */
+
+.messages{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    margin-top:20px;
+
+    padding-bottom:20px;
+}
+
+
+/* ==========================================
+   Message Row
+========================================== */
+
+.message{
+
+    display:flex;
+
+    align-items:flex-end;
+
+    gap:12px;
+
+    animation:fadeIn .3s ease;
+}
+
+.message.user{
+
+    justify-content:flex-end;
+}
+
+.message.bot{
+
+    justify-content:flex-start;
+}
+
+
+/* ==========================================
+   Avatar
+========================================== */
+
+.avatar{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:2px solid #2563EB;
+
+    flex-shrink:0;
+}
+
+
+/* ==========================================
+   Chat Bubble
+========================================== */
+
+.bubble{
+
+    max-width:70%;
+
+    padding:14px 18px;
+
+    border-radius:18px;
+
+    line-height:1.7;
+
+    font-size:14px;
+
+    word-wrap:break-word;
+
+    position:relative;
+}
+
+
+/* ==========================================
+   User Bubble
+========================================== */
+
+.user .bubble{
+
+    background:linear-gradient(135deg,#2563EB,#06B6D4);
+
+    color:white;
+
+    border-bottom-right-radius:5px;
+}
+
+
+/* ==========================================
+   Bot Bubble
+========================================== */
+
+.bot .bubble{
+
+    background:#1E293B;
+
+    color:#F8FAFC;
+
+    border:1px solid #334155;
+
+    border-bottom-left-radius:5px;
+}
+
+
+/* ==========================================
+   Timestamp
+========================================== */
+
+.message-time{
+
+    margin-top:6px;
+
+    font-size:11px;
+
+    color:#94A3B8;
+}
+
+
+/* ==========================================
+   Message Actions
+========================================== */
+
+.message-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-top:10px;
+}
+
+.action-btn{
+
+    background:none;
+
+    border:none;
+
+    color:#94A3B8;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+    transition:.25s;
+}
+
+.action-btn:hover{
+
+    color:#06B6D4;
+
+    transform:scale(1.15);
+}
+
+.action-btn.active{
+
+    color:#2563EB;
+}
+
+
+/* ==========================================
+   Typing Indicator
+========================================== */
+
+.typing{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-top:20px;
+}
+
+.typing-bubble{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:5px;
+
+    background:#1E293B;
+
+    border:1px solid #334155;
+
+    border-radius:18px;
+
+    padding:12px 18px;
+}
+
+.typing-bubble span{
+
+    width:8px;
+
+    height:8px;
+
+    background:#06B6D4;
+
+    border-radius:50%;
+
+    animation:typing 1.3s infinite;
+}
+
+.typing-bubble span:nth-child(2){
+
+    animation-delay:.2s;
+}
+
+.typing-bubble span:nth-child(3){
+
+    animation-delay:.4s;
+}
+
+
+/* ==========================================
+   Scrollbar
+========================================== */
+
+.chat-area::-webkit-scrollbar{
+
+    width:8px;
+}
+
+.chat-area::-webkit-scrollbar-track{
+
+    background:#111827;
+}
+
+.chat-area::-webkit-scrollbar-thumb{
+
+    background:#334155;
+
+    border-radius:10px;
+}
+
+.chat-area::-webkit-scrollbar-thumb:hover{
+
+    background:#475569;
+}
+
+
+/* ==========================================
+   Fade Animation
+========================================== */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(12px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+    }
+
+}
+
+
+/* ==========================================
+   Typing Animation
+========================================== */
+
+@keyframes typing{
+
+    0%{
+
+        opacity:.3;
+
+        transform:translateY(0);
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:translateY(-5px);
+    }
+
+    100%{
+
+        opacity:.3;
+
+        transform:translateY(0);
+    }
+
+}
+/* ==========================================
+   File Attachment
+========================================== */
+
+.file-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:12px 15px;
+
+    border-radius:14px;
+
+    background:#1E293B;
+
+    border:1px solid #334155;
+
+    margin-top:8px;
+
+    transition:.3s;
+
+}
+
+.file-card:hover{
+
+    border-color:#2563EB;
+
+    transform:translateY(-2px);
+
+}
+
+.file-icon{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:22px;
+
+    background:#2563EB;
+
+    color:white;
+
+    flex-shrink:0;
+
+}
+
+.file-info{
+
+    flex:1;
+
+    overflow:hidden;
+
+}
+
+.file-name{
+
+    font-size:14px;
+
+    font-weight:600;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+}
+
+.file-size{
+
+    font-size:12px;
+
+    color:#94A3B8;
+
+    margin-top:3px;
+
+}
+
+.file-image{
+
+    width:230px;
+
+    border-radius:14px;
+
+    display:block;
+
+    margin-top:8px;
+
+    border:1px solid #334155;
+
+}
+
+.file-image:hover{
+
+    transform:scale(1.02);
+
+    transition:.3s;
+
+}
+
+.upload-success{
+
+    color:#22C55E;
+
+    font-size:13px;
+
+    margin-top:8px;
+
+    font-weight:500;
+
+}
+
+/* ==========================================
+   Light Theme
+========================================== */
+
+.light-mode .file-card{
+
+    background:#F8FAFC;
+
+    border:1px solid #CBD5E1;
+
+}
+
+.light-mode .file-name{
+
+    color:#111827;
+
+}
+
+.light-mode .file-size{
+
+    color:#64748B;
+
+}
+
+.light-mode .file-image{
+
+    border:1px solid #CBD5E1;
+
+}

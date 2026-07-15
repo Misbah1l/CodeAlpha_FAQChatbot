@@ -1,0 +1,54 @@
+[
+    {
+        "question": "hello",
+        "answer": "Hello! 👋 Welcome to Smart FAQ AI. How can I help you today?"
+    },
+    {
+        "question": "hi",
+        "answer": "Hi! 😊 Welcome to Smart FAQ AI. Feel free to ask me any question."
+    },
+    {
+        "question": "hey",
+        "answer": "Hey! 👋 I'm Smart FAQ AI. How may I assist you today?"
+    },
+    {
+        "question": "What is CodeAlpha?",
+        "answer": "CodeAlpha is an internship platform that provides real-world projects to help students improve their practical skills."
+    },
+    {
+        "question": "How do I apply for an internship?",
+        "answer": "Visit the official CodeAlpha website and submit the internship application form."
+    },
+    {
+        "question": "How long is the internship?",
+        "answer": "The internship duration depends on the program offered by CodeAlpha."
+    },
+    {
+        "question": "Will I receive a certificate?",
+        "answer": "Yes. After successfully completing all assigned tasks, you will receive a completion certificate."
+    },
+    {
+        "question": "Do I get a letter of recommendation?",
+        "answer": "Yes. Outstanding interns may receive a Letter of Recommendation based on their performance."
+    },
+    {
+        "question": "What programming languages are supported?",
+        "answer": "Projects may involve Python, Java, C++, JavaScript, Machine Learning, Web Development and more."
+    },
+    {
+        "question": "Where should I upload my project?",
+        "answer": "Upload your complete project to a GitHub repository named according to the internship instructions."
+    },
+    {
+        "question": "Do I need to post on LinkedIn?",
+        "answer": "Yes. Share your internship status and project video on LinkedIn while tagging CodeAlpha."
+    },
+    {
+        "question": "Can I submit projects late?",
+        "answer": "It is recommended to submit projects before the deadline mentioned in your internship."
+    },
+    {
+        "question": "Who can I contact for support?",
+        "answer": "You can contact the CodeAlpha support team through their official communication channels."
+    }
+]
