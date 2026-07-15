@@ -184,17 +184,17 @@ http://127.0.0.1:5000/
 # 📸 Application Screens
 
 
-![Home Screen]
+Home Screen
 
 <img width="1917" height="942" alt="image" src="https://github.com/user-attachments/assets/9d0e1bc4-9921-4182-ad45-09d55bf9e54f" />
 
 
-![Chat Screen]
+Chat Screen
 
 <img width="1918" height="932" alt="image" src="https://github.com/user-attachments/assets/44979ceb-4a6f-4dc5-8f8c-51872f15e04d" />
 
 
-![Login Screen]
+Login Screen
 
 <img width="1665" height="935" alt="image" src="https://github.com/user-attachments/assets/3185639e-cbe9-4135-87a3-5d9746f56a9c" />
 
