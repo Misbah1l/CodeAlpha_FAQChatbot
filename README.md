@@ -1,63 +1,50 @@
-# 🤖 Smart FAQ AI Assistant
+# 🤖 Smart FAQ AI Chatbot
 
-An intelligent FAQ-based chatbot built with **Flask, NLP, and Machine Learning techniques**.  
-Smart FAQ AI Assistant helps users get instant answers to frequently asked questions using **TF-IDF Vectorization and Cosine Similarity**.
+Smart FAQ AI is an intelligent FAQ-based chatbot developed using **Python, Flask, NLP, and Machine Learning techniques**. It provides instant answers to frequently asked questions using **TF-IDF Vectorization and Cosine Similarity**.
 
-The application provides a modern ChatGPT-style interface with authentication, chat history, voice input, theme switching, and an interactive user experience.
+The chatbot comes with a modern ChatGPT-style interface including authentication, chat history, dark/light mode, and voice input support.
 
 ---
 
-# ✨ Features
+## 🚀 Features
 
-## 🤖 AI FAQ Chatbot
-- NLP-based question answering system
-- Uses TF-IDF Vectorizer
-- Uses Cosine Similarity for matching questions
-- Returns the most relevant FAQ answer
-- Confidence score generation
+✨ **AI FAQ Chatbot**
+- Answers user questions using NLP techniques
+- Uses TF-IDF and Cosine Similarity for matching
+- Provides confidence-based responses
 
-## 💬 Chat Interface
-- Modern ChatGPT-style UI
-- User and AI message bubbles
-- AI typing animation
-- Copy response option
-- Like / Dislike feedback buttons
-- Suggested FAQ questions
+🔐 **User Authentication**
+- Login system
+- Username-based profile display
+- Logout functionality
 
-## 🔐 Authentication System
-- User Login
-- User Signup
-- Session-based authentication
-- Google Login button integration (demo)
+💬 **Chat Features**
+- Real-time conversation
+- Chat history storage
+- New Chat option
+- Copy response button
+- Like/Dislike feedback buttons
 
-## 🌓 User Experience
-- Dark theme interface
-- Light theme support
+🎤 **Voice Support**
+- Voice input using Speech Recognition API
+
+🎨 **Modern UI**
+- ChatGPT-inspired interface
+- Dark/Light theme toggle
 - Responsive design
-- Mobile-friendly layout
+- Premium glassmorphism login page
 
-## 🎤 Voice Support
-- Voice input using browser speech recognition
-
-## 💾 Chat History
-- Save previous conversations
-- View recent chats
-- Search conversations
-- Delete chat history
+📚 **FAQ Knowledge Base**
+- Programming languages
+- Web development
+- Databases
+- Artificial Intelligence
+- Machine Learning
+- CodeAlpha internship FAQs
 
 ---
 
 # 🛠️ Technologies Used
-
-## Backend
-- Python
-- Flask
-
-## Artificial Intelligence / NLP
-- Scikit-learn
-- TF-IDF Vectorization
-- Cosine Similarity
-- Text preprocessing
 
 ## Frontend
 - HTML5
@@ -65,65 +52,60 @@ The application provides a modern ChatGPT-style interface with authentication, c
 - JavaScript
 - Font Awesome Icons
 
-## Data Storage
-- JSON Dataset (`faq.json`)
-- Browser Local Storage
+## Backend
+- Python
+- Flask
+
+## Artificial Intelligence / NLP
+- TF-IDF Vectorization
+- Cosine Similarity
+- Natural Language Processing
+
+## Libraries
+- Scikit-learn
+- NLTK
+- Flask
 
 ---
 
 # 📂 Project Structure
-
-```
-Smart-FAQ-AI/
+Smart_FAQ_AI/
 │
 ├── app.py
 ├── chatbot.py
 ├── preprocess.py
 ├── faq.json
 ├── requirements.txt
+├── README.md
 │
 ├── templates/
-│   ├── index.html
-│   ├── login.html
-│   └── signup.html
+│ ├── index.html
+│ └── login.html
 │
 ├── static/
-│   │
-│   ├── css/
-│   │   ├── style.css
-│   │   ├── chat.css
-│   │   ├── auth.css
-│   │   └── responsive.css
-│   │
-│   ├── js/
-│   │   ├── app.js
-│   │   ├── chat.js
-│   │   ├── sidebar.js
-│   │   └── auth.js
-│   │
-│   └── images/
-│       ├── logo.png
-│       ├── favicon.png
-│       ├── bot.png
-│       ├── user.png
-│       ├── welcome.png
-│       └── google.png
+│ │
+│ ├── css/
+│ │ ├── style.css
+│ │ ├── chat.css
+│ │ ├── responsive.css
+│ │ └── auth.css
+│ │
+│ ├── js/
+│ │ ├── app.js
+│ │ ├── chat.js
+│ │ ├── sidebar.js
+│ │ └── auth.js
+│ │
+│ └── images/
+│ ├── logo.png
+│ ├── favicon.png
+│ ├── bot.png
+│ ├── user.png
+│ ├── welcome.png
+│ └── google.png
 │
-└── README.md
-```
+└── uploads/
 
----
-
-# 🖼️ Images Used
-
-| Image | Purpose |
-|---|---|
-| logo.png | Sidebar and Login page logo |
-| favicon.png | Browser tab icon |
-| bot.png | AI assistant avatar |
-| user.png | User message avatar |
-| welcome.png | Welcome screen illustration |
-| google.png | Google login button icon |
 
 ---
 
@@ -132,137 +114,54 @@ Smart-FAQ-AI/
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/your-username/Smart-FAQ-AI.git
-```
-
-### 2. Open Project Folder
-
-```bash
-cd Smart-FAQ-AI
-```
-
-### 3. Create Virtual Environment
-
-```bash
-python -m venv venv
-```
-
-Activate environment:
-
-Windows:
-
-```bash
-venv\Scripts\activate
-```
-
----
-
-### 4. Install Dependencies
-
-```bash
+git clone https://github.com/Misbah1l/CodeAlpha_FAQChatbot.git
+2. Open Project Folder
+cd CodeAlpha_FAQChatbot
+3. Install Dependencies
 pip install -r requirements.txt
-```
+▶️ Run Application
 
----
+Start Flask server:
 
-### 5. Run Application
-
-```bash
 python app.py
-```
 
----
+Open browser:
 
-### 6. Open Browser
-
-```
 http://127.0.0.1:5000/
-```
+🧠 How It Works
+User enters a question.
+Text is preprocessed using NLP techniques.
+TF-IDF converts text into numerical vectors.
+Cosine Similarity compares user input with stored FAQs.
+The chatbot returns the most relevant answer.
+📌 Example Questions
+What is Python?
 
----
+What is Machine Learning?
 
-# 📸 Application Screens
+What programming languages are used?
 
+What is CodeAlpha?
 
-Home Screen
+What is MongoDB?
 
-<img width="1917" height="942" alt="image" src="https://github.com/user-attachments/assets/9d0e1bc4-9921-4182-ad45-09d55bf9e54f" />
+What is GitHub?
+🔮 Future Improvements
+Real Google OAuth Authentication
+Image and file understanding
+Voice output response
+Larger FAQ dataset
+Deep Learning based chatbot model
+Database integration
+👩‍💻 Developer
 
-
-Chat Screen
-
-<img width="1918" height="932" alt="image" src="https://github.com/user-attachments/assets/44979ceb-4a6f-4dc5-8f8c-51872f15e04d" />
-
-
-Login Screen
-
-<img width="1665" height="935" alt="image" src="https://github.com/user-attachments/assets/3185639e-cbe9-4135-87a3-5d9746f56a9c" />
-
-
-<img width="1899" height="857" alt="image" src="https://github.com/user-attachments/assets/c20573da-d725-4619-ab00-a83b501691a8" />
-
-
-
----
-
-# 🧠 How It Works
-
-```
-User Question
-
-      ↓
-
-Text Preprocessing
-
-      ↓
-
-TF-IDF Vectorization
-
-      ↓
-
-Cosine Similarity Matching
-
-      ↓
-
-Best FAQ Answer
-
-      ↓
-
-Response Display
-```
-
----
-
-# 🔮 Future Improvements
-
-- Real Google OAuth authentication
-- Database integration
-- Admin dashboard for FAQ management
-- PDF FAQ document upload
-- Multilingual support
-- Advanced AI model integration
-- Image and document understanding
-
----
-
-# 👩‍💻 Developer
-
-**Misbah Saeed**
+Misbah Saeed
 
 BS Computer Science Student
 
-Skills:
-- Python
-- Flask
-- Machine Learning
-- NLP
-- HTML/CSS
-- JavaScript
-- MongoDB
-- SQL
+GitHub:
+https://github.com/Misbah1l
 
----
+📜 License
 
-# 📄 License
-
-This project is created for educational and learning purposes.
+This project is developed for educational and internship purposes.

@@ -3,10 +3,11 @@
 // app.js
 // =====================================
 
-
+// =====================================
 // Elements
+// =====================================
 
-const newChatBtn = document.querySelector(".new-chat-btn");
+const newChatBtn = document.getElementById("new-chat-btn");
 
 const chatMessages = document.getElementById("messages");
 
@@ -18,248 +19,160 @@ const themeBtn = document.getElementById("theme-btn");
 
 const loginBtn = document.getElementById("login-btn");
 
-const signupBtn = document.getElementById("signup-btn");
-
-const micBtn = document.getElementById("mic-btn");
-
-const attachBtn = document.getElementById("attach-btn");
-
+const appMicBtn = document.getElementById("mic-btn");
 
 
 // =====================================
 // New Chat
 // =====================================
 
+
 if(newChatBtn){
 
-    newChatBtn.addEventListener("click",()=>{
+    newChatBtn.onclick = function(){
 
+        if(chatMessages){
 
-        chatMessages.innerHTML="";
-
-
-        welcomeScreen.style.display="block";
-
-
-        const typing =
-        document.getElementById("typing");
-
-
-        if(typing){
-
-            typing.style.display="none";
+            chatMessages.innerHTML = "";
 
         }
 
 
-        userInput.value="";
+        if(welcomeScreen){
+
+            welcomeScreen.style.display = "block";
+
+        }
 
 
-        userInput.focus();
+        const typing = document.getElementById("typing");
 
 
-    });
+        if(typing){
+
+            typing.style.display = "none";
+
+        }
+
+
+        if(userInput){
+
+            userInput.value = "";
+
+            userInput.focus();
+
+        }
+
+    };
 
 }
-
-
 
 // =====================================
 // Login Button
 // =====================================
 
-if(loginBtn){
+if (loginBtn) {
 
-    loginBtn.addEventListener("click",()=>{
+    loginBtn.addEventListener("click", () => {
 
-        window.location.href="/login";
+        window.location.href = "/login";
 
     });
 
 }
-
-
-
 
 
 // =====================================
 // Theme Toggle
 // =====================================
 
-if(themeBtn){
+if (themeBtn) {
 
-    themeBtn.addEventListener("click",()=>{
-
+    themeBtn.addEventListener("click", () => {
 
         document.body.classList.toggle("light-mode");
 
-
-        if(document.body.classList.contains("light-mode")){
-
-            themeBtn.innerHTML =
-            '<i class="fa-solid fa-sun"></i>';
-
-        }
-
-        else{
+        if (document.body.classList.contains("light-mode")) {
 
             themeBtn.innerHTML =
-            '<i class="fa-solid fa-moon"></i>';
-
-        }
-
-
-    });
-
-}
-
-
-
-// =====================================
-// Plus Button
-// =====================================
-
-// =====================================
-// File Attachment
-// =====================================
-
-const fileInput = document.getElementById("file-input");
-
-if (attachBtn && fileInput) {
-
-    attachBtn.addEventListener("click", () => {
-
-        fileInput.click();
-
-    });
-
-    fileInput.addEventListener("change", async function () {
-
-        if (this.files.length === 0) return;
-
-        const file = this.files[0];
-
-        // Image Preview
-        if (file.type.startsWith("image/")) {
-
-            const reader = new FileReader();
-
-            reader.onload = function (e) {
-
-                const message = document.createElement("div");
-
-                message.className = "message user";
-
-                message.innerHTML = `
-                    <div class="bubble">
-                        <img src="${e.target.result}"
-                             style="max-width:220px;
-                                    border-radius:12px;
-                                    display:block;
-                                    margin-bottom:8px;">
-
-                        <div>📷 ${file.name}</div>
-                    </div>
-                `;
-
-                messages.appendChild(message);
-
-                scrollBottom();
-
-            };
-
-            reader.readAsDataURL(file);
+                '<i class="fa-solid fa-sun"></i>';
 
         }
 
         else {
 
-            addMessage("📎 " + file.name, "user");
+            themeBtn.innerHTML =
+                '<i class="fa-solid fa-moon"></i>';
 
         }
-
-        const formData = new FormData();
-
-        formData.append("file", file);
-
-        try {
-
-            const response = await fetch("/upload", {
-
-                method: "POST",
-
-                body: formData
-
-            });
-
-            const data = await response.json();
-
-            addMessage(data.message, "bot");
-
-        }
-
-        catch {
-
-            addMessage("❌ File upload failed.", "bot");
-
-        }
-
-        this.value = "";
 
     });
 
 }
-
-
 // =====================================
-// Voice Button
+// Voice Recognition
 // =====================================
 
-if(micBtn){
+if (appMicBtn) {
 
+    micBtn.addEventListener("click", () => {
 
-    micBtn.addEventListener("click",()=>{
+        const SpeechRecognition =
+            window.SpeechRecognition ||
+            window.webkitSpeechRecognition;
 
+        if (!SpeechRecognition) {
 
-        if(!("webkitSpeechRecognition" in window)){
-
-
-            alert("Voice recognition not supported");
-
+            alert("Voice recognition is not supported in this browser.");
 
             return;
 
         }
 
+        const recognition = new SpeechRecognition();
 
+        recognition.lang = "en-US";
 
-        const recognition =
-        new webkitSpeechRecognition();
+        recognition.interimResults = false;
 
-
-
-        recognition.lang="en-US";
-
+        recognition.maxAlternatives = 1;
 
         recognition.start();
 
+        recognition.onstart = () => {
 
-
-        recognition.onresult=function(event){
-
-
-            userInput.value =
-            event.results[0][0].transcript;
-
+            appMicBtn.innerHTML =
+                '<i class="fa-solid fa-microphone-lines"></i>';
 
         };
 
+        recognition.onresult = (event) => {
+
+            if (userInput) {
+
+                userInput.value =
+                    event.results[0][0].transcript;
+
+            }
+
+        };
+
+        recognition.onerror = () => {
+
+            alert("Voice recognition failed.");
+
+        };
+
+        recognition.onend = () => {
+
+            appMicBtn.innerHTML =
+                '<i class="fa-solid fa-microphone"></i>';
+
+        };
 
     });
 
-
 }
-
 
 
 // =====================================
@@ -267,41 +180,80 @@ if(micBtn){
 // =====================================
 
 const suggestionButtons =
-document.querySelectorAll(".suggestions button");
+    document.querySelectorAll(".suggestions button");
 
+suggestionButtons.forEach((button) => {
 
-suggestionButtons.forEach(button=>{
+    button.addEventListener("click", () => {
 
+        if (!userInput) return;
 
-    button.addEventListener("click",()=>{
+        userInput.value = button.innerText;
 
+        if (typeof sendMessage === "function") {
 
-        userInput.value =
-        button.innerText;
+            sendMessage();
 
-
-        sendMessage();
-
+        }
 
     });
 
-
 });
-
-
-
 // =====================================
 // Auto Focus
 // =====================================
 
-window.onload=()=>{
+window.addEventListener("load", () => {
 
-
-    if(userInput){
+    if (userInput) {
 
         userInput.focus();
 
     }
 
+});
 
-};
+
+// =====================================
+// Keyboard Shortcut
+// Ctrl + /  => Focus Input
+// =====================================
+
+document.addEventListener("keydown", (event) => {
+
+    if (event.ctrlKey && event.key === "/") {
+
+        event.preventDefault();
+
+        if (userInput) {
+
+            userInput.focus();
+
+        }
+
+    }
+
+});
+
+
+// =====================================
+// Prevent Empty Elements Errors
+// =====================================
+
+if (!chatMessages) {
+
+    console.warn("Messages container not found.");
+
+}
+
+if (!userInput) {
+
+    console.warn("User input not found.");
+
+}
+
+
+// =====================================
+// Smart FAQ AI
+// Final Version
+// =====================================

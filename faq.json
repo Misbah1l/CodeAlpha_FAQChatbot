@@ -5,50 +5,78 @@
     },
     {
         "question": "hi",
-        "answer": "Hi! 😊 Welcome to Smart FAQ AI. Feel free to ask me any question."
-    },
-    {
-        "question": "hey",
-        "answer": "Hey! 👋 I'm Smart FAQ AI. How may I assist you today?"
+        "answer": "Hi! 😊 Feel free to ask me anything."
     },
     {
         "question": "What is CodeAlpha?",
-        "answer": "CodeAlpha is an internship platform that provides real-world projects to help students improve their practical skills."
+        "answer": "CodeAlpha is an internship platform that provides students with real-world projects to improve practical skills."
     },
     {
-        "question": "How do I apply for an internship?",
-        "answer": "Visit the official CodeAlpha website and submit the internship application form."
+        "question": "How do I apply for internship?",
+        "answer": "You can apply for an internship by submitting the application form through the official CodeAlpha platform."
     },
     {
-        "question": "How long is the internship?",
-        "answer": "The internship duration depends on the program offered by CodeAlpha."
+        "question": "What programming languages are used?",
+        "answer": "Popular programming languages include Python, Java, C++, JavaScript, C#, and PHP."
     },
     {
-        "question": "Will I receive a certificate?",
-        "answer": "Yes. After successfully completing all assigned tasks, you will receive a completion certificate."
+        "question": "What is Python?",
+        "answer": "Python is a high-level programming language widely used in Artificial Intelligence, Machine Learning, Web Development, and Automation."
     },
     {
-        "question": "Do I get a letter of recommendation?",
-        "answer": "Yes. Outstanding interns may receive a Letter of Recommendation based on their performance."
+        "question": "What is Java?",
+        "answer": "Java is an object-oriented programming language used for Android apps, web applications, and enterprise software."
     },
     {
-        "question": "What programming languages are supported?",
-        "answer": "Projects may involve Python, Java, C++, JavaScript, Machine Learning, Web Development and more."
+        "question": "What is C++?",
+        "answer": "C++ is a powerful programming language used for system software, game development, and performance-based applications."
     },
     {
-        "question": "Where should I upload my project?",
-        "answer": "Upload your complete project to a GitHub repository named according to the internship instructions."
+        "question": "What is JavaScript?",
+        "answer": "JavaScript is a programming language used to create interactive websites and modern web applications."
     },
     {
-        "question": "Do I need to post on LinkedIn?",
-        "answer": "Yes. Share your internship status and project video on LinkedIn while tagging CodeAlpha."
+        "question": "What is HTML?",
+        "answer": "HTML is used to create the structure of web pages."
     },
     {
-        "question": "Can I submit projects late?",
-        "answer": "It is recommended to submit projects before the deadline mentioned in your internship."
+        "question": "What is CSS?",
+        "answer": "CSS is used to style web pages including colors, layouts, and animations."
     },
     {
-        "question": "Who can I contact for support?",
-        "answer": "You can contact the CodeAlpha support team through their official communication channels."
+        "question": "What is SQL?",
+        "answer": "SQL is a language used to store, manage, and retrieve data from relational databases."
+    },
+    {
+        "question": "What is MongoDB?",
+        "answer": "MongoDB is a NoSQL database that stores data in flexible document format."
+    },
+    {
+        "question": "What is Artificial Intelligence?",
+        "answer": "Artificial Intelligence is the field of computer science that enables machines to perform tasks requiring human intelligence."
+    },
+    {
+        "question": "What is Machine Learning?",
+        "answer": "Machine Learning allows computers to learn from data and improve performance without being explicitly programmed."
+    },
+    {
+        "question": "Which language is best for AI?",
+        "answer": "Python is the most popular language for AI because of libraries like TensorFlow, PyTorch, and Scikit-learn."
+    },
+    {
+        "question": "What is GitHub?",
+        "answer": "GitHub is a platform used to store, manage, and collaborate on software projects using Git."
+    },
+    {
+        "question": "What is frontend development?",
+        "answer": "Frontend development focuses on the user interface using HTML, CSS, and JavaScript."
+    },
+    {
+        "question": "What is backend development?",
+        "answer": "Backend development handles server logic, databases, and application functionality."
+    },
+    {
+        "question": "Thank you",
+        "answer": "You're welcome! 😊 Feel free to ask any other questions."
     }
 ]

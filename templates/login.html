@@ -8,125 +8,98 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-
     <title>Login | Smart FAQ AI</title>
-
 
     <link rel="stylesheet"
           href="{{ url_for('static', filename='css/auth.css') }}">
-
 
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 </head>
 
-
 <body>
-
 
 <div class="auth-container">
 
-
     <div class="auth-card">
-
-
-
 
         <!-- Logo -->
 
         <div class="auth-logo">
 
-
             <img src="{{ url_for('static', filename='images/logo.png') }}"
-                 alt="Logo">
-
+                 alt="Smart FAQ AI Logo">
 
             <h2>Smart FAQ AI</h2>
 
-
         </div>
-
-
-
 
         <p class="subtitle">
 
-            Login to continue your AI assistant
+            Login to continue your AI Assistant
 
         </p>
 
-
-
-
-
         <!-- Login Form -->
 
-        <form action="/login"
-              method="POST">
+        <form action="/login" method="POST">
 
-
+            <!-- Username -->
 
             <div class="input-box">
 
+                <i class="fa-solid fa-user"></i>
 
-                <i class="fa-solid fa-envelope"></i>
-
-
-                <input type="email"
-                       name="email"
-                       placeholder="Email Address"
-                       required>
-
+                <input
+                    type="text"
+                    name="username"
+                    placeholder="Username"
+                    required>
 
             </div>
 
-
-
-
+            <!-- Email -->
 
             <div class="input-box">
 
+                <i class="fa-solid fa-envelope"></i>
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Email Address"
+                    required>
+
+            </div>
+
+            <!-- Password -->
+
+            <div class="input-box">
 
                 <i class="fa-solid fa-lock"></i>
 
-
-
-                <input type="password"
-                       id="password"
-                       name="password"
-                       placeholder="Password"
-                       required>
-
-
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Password"
+                    required>
 
                 <i class="fa-solid fa-eye"
                    id="togglePassword"></i>
 
-
             </div>
-
-
-
-
-
 
             <div class="options">
 
-
                 <label>
 
-
-                    <input type="checkbox"
-                           name="remember">
-
+                    <input type="checkbox" name="remember">
 
                     Remember me
 
-
                 </label>
-
-
 
                 <a href="#">
 
@@ -134,87 +107,43 @@
 
                 </a>
 
-
-
             </div>
 
-
-
-
-
-
-
-            <button type="submit"
-                    class="auth-submit">
-
+            <button
+                type="submit"
+                class="auth-submit">
 
                 Login
 
-
             </button>
-
-
 
         </form>
 
-
-
-
-
-
-
         <div class="divider">
-
 
             <span>OR</span>
 
-
         </div>
-
-
-
-
-
-
-
 
         <!-- Google Login -->
 
         <a href="/google-login"
            class="google-btn">
 
-
             <img src="{{ url_for('static', filename='images/google.png') }}"
                  alt="Google">
 
-
             Continue with Google
-
-
 
         </a>
 
-
-
-
-
-
-
-
     </div>
-
 
 </div>
 
-
-
-
-
 <script src="{{ url_for('static', filename='js/auth.js') }}"></script>
-
-
 
 </body>
 
-
 </html>
+

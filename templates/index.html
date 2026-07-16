@@ -10,65 +10,46 @@
 
     <title>Smart FAQ AI</title>
 
-
     <link rel="icon"
           href="{{ url_for('static', filename='images/favicon.png') }}">
-
 
     <link rel="stylesheet"
           href="{{ url_for('static', filename='css/style.css') }}">
 
-
     <link rel="stylesheet"
           href="{{ url_for('static', filename='css/chat.css') }}">
-
 
     <link rel="stylesheet"
           href="{{ url_for('static', filename='css/responsive.css') }}">
 
-
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-
 </head>
-
 
 <body>
 
-
 <div class="app-container">
-
-
 
 <!-- ================= Sidebar ================= -->
 
-
 <aside class="sidebar">
-
 
     <div class="sidebar-top">
 
-
         <div class="logo">
-
 
             <img src="{{ url_for('static', filename='images/logo.png') }}"
                  class="logo-img">
-
 
             <span>
                 Smart FAQ AI
             </span>
 
-
         </div>
-
-
 
         <button class="new-chat-btn"
                 id="new-chat-btn">
-
 
             <i class="fa-solid fa-plus"></i>
 
@@ -76,61 +57,42 @@
                 New Chat
             </span>
 
-
         </button>
-
 
     </div>
 
-
-
-
+    <!-- Search -->
 
     <div class="search-box">
 
-
         <i class="fa-solid fa-magnifying-glass"></i>
 
-
-        <input type="text"
-               id="search-chat"
-               placeholder="Search chats">
-
+        <input
+            type="text"
+            id="search-chat"
+            placeholder="Search chats">
 
     </div>
 
-
-
-
+    <!-- History -->
 
     <div class="history">
-
 
         <h3>
             Recent Conversations
         </h3>
 
-
         <ul id="history-list"></ul>
-
 
     </div>
 
-
-
-
-
-    <!-- ================= Profile Bottom ================= -->
-
+    <!-- Profile -->
 
     {% if session.get("user") %}
 
-
     <div class="profile-box">
 
-
         <div class="profile-info">
-
 
             <div class="profile-avatar">
 
@@ -138,126 +100,67 @@
 
             </div>
 
-
             <span>
 
-                {{ session.get("username","User") }}
+                {{ session.get("user","User") }}
 
             </span>
 
-
         </div>
-
-
 
         <a href="/logout"
            class="logout-btn">
-
 
             <i class="fa-solid fa-right-from-bracket"></i>
 
             Logout
 
-
         </a>
 
-
     </div>
-
 
     {% endif %}
 
-
-
-
-
 </aside>
-
-
-
-
-
 
 <!-- ================= Main ================= -->
 
-
 <main class="main">
-
-
-
-
 
 <header class="top-bar">
 
-
-    
-
-
-
-
     <div class="top-actions">
 
- <button class="auth-btn" onclick="window.location.href='/login'">
-        Login
-    </button>
-
-        <button id="theme-btn"
-                class="icon-btn">
-            
+        <button
+            id="theme-btn"
+            class="icon-btn">
 
             <i class="fa-solid fa-moon"></i>
 
-
         </button>
-
-
-
-
 
         {% if session.get("user") %}
 
-
         <span class="welcome-user">
 
-            Hi, {{ session.get("username","User") }}
+            Hi,
+            {{ session.get("user","User") }}
 
         </span>
 
-
-        {% else %}
-
-
-       
-
-
         {% endif %}
-
-
-
-
 
     </div>
 
-
 </header>
 
-
-
-
-
-
-
+<!-- ================= Chat Area ================= -->
 
 <section class="chat-area">
 
-
-
-
-
-<div id="welcome"
-     class="welcome">
-
-
+<div
+    id="welcome"
+    class="welcome">
 
     <h1>
 
@@ -265,182 +168,83 @@
 
     </h1>
 
-
-
     <p>
 
         Ask anything related to our FAQs.
 
     </p>
 
+    
 
+</div>
 
+<div
+    id="messages"
+    class="messages">
 
+</div>
 
-    <div class="suggestions">
+<div
+    id="typing"
+    class="typing"
+    style="display:none;">
 
+    <img
+        src="{{ url_for('static', filename='images/bot.png') }}"
+        class="avatar">
 
-        <button>
-            Admissions
-        </button>
+    <div class="typing-bubble">
 
-
-        <button>
-            Fee Structure
-        </button>
-
-
-        <button>
-            Scholarships
-        </button>
-
-
-        <button>
-            Contact
-        </button>
-
+        <span></span>
+        <span></span>
+        <span></span>
 
     </div>
 
-
-
 </div>
-
-
-
-
-
-
-
-
-<div id="messages"
-     class="messages">
-
-</div>
-
-
-
-
-
-
-<div id="typing"
-     class="typing"
-     style="display:none;">
-
-
-<img src="{{ url_for('static', filename='images/bot.png') }}"
-     class="avatar">
-
-
-<div class="typing-bubble">
-
-<span></span>
-<span></span>
-<span></span>
-
-</div>
-
-
-</div>
-
-
-
-
 
 </section>
-
-
-
-
-
-
-
+<!-- ================= Input Area ================= -->
 
 <div class="input-wrapper">
 
+    <input
+        type="text"
+        id="user-input"
+        placeholder="Ask Smart FAQ AI anything...">
 
-
-<button id="attach-btn"
+    <button
+        id="mic-btn"
         class="circle-btn">
 
+        <i class="fa-solid fa-microphone"></i>
 
-<i class="fa-solid fa-plus"></i>
+    </button>
 
-
-</button>
-
-<input
-   type="file"
-    id="file-input"
-    accept=".pdf,.doc,.docx,.txt,.png,.jpg,.jpeg"
-    style="display:none;">
-
-
-<input type="text"
-       id="user-input"
-       placeholder="Ask Smart FAQ AI anything...">
-
-
-
-
-
-<button id="mic-btn"
-        class="circle-btn">
-
-
-<i class="fa-solid fa-microphone"></i>
-
-
-</button>
-
-
-
-
-
-<button id="send-btn"
+    <button
+        id="send-btn"
         class="send-btn">
 
+        <i class="fa-solid fa-paper-plane"></i>
 
-<i class="fa-solid fa-paper-plane"></i>
-
-
-</button>
-
-
+    </button>
 
 </div>
 
-
-
-
-
+<!-- ================= Footer ================= -->
 
 <footer class="footer">
 
-
-Smart FAQ AI may produce incorrect answers.
-Please verify important information.
-
+    Smart FAQ AI may produce incorrect answers.
+    Please verify important information.
 
 </footer>
 
-
-
-
-
-
-
 </main>
-
-
 
 </div>
 
-
-
-
-
-
+<!-- ================= JavaScript ================= -->
 
 <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
 
@@ -448,9 +252,6 @@ Please verify important information.
 
 <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 
-
-
 </body>
-
 
 </html>
