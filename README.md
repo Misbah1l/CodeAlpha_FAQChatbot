@@ -103,8 +103,6 @@ Smart_FAQ_AI/
 │ ├── user.png
 │ ├── welcome.png
 │ └── google.png
-│
-└── uploads/
 
 
 ---
