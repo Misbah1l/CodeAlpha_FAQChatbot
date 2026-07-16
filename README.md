@@ -69,42 +69,42 @@ The chatbot comes with a modern ChatGPT-style interface including authentication
 ---
 
 # 📂 Project Structure
-Smart_FAQ_AI/
+Smart-FAQ-AI/
 │
 ├── app.py
 ├── chatbot.py
 ├── preprocess.py
 ├── faq.json
 ├── requirements.txt
-├── README.md
 │
 ├── templates/
-│ ├── index.html
-│ └── login.html
+│   ├── index.html
+│   ├── login.html
+│   └── signup.html
 │
 ├── static/
-│ │
-│ ├── css/
-│ │ ├── style.css
-│ │ ├── chat.css
-│ │ ├── responsive.css
-│ │ └── auth.css
-│ │
-│ ├── js/
-│ │ ├── app.js
-│ │ ├── chat.js
-│ │ ├── sidebar.js
-│ │ └── auth.js
-│ │
-│ └── images/
-│ ├── logo.png
-│ ├── favicon.png
-│ ├── bot.png
-│ ├── user.png
-│ ├── welcome.png
-│ └── google.png
-
-
+│   │
+│   ├── css/
+│   │   ├── style.css
+│   │   ├── chat.css
+│   │   ├── auth.css
+│   │   └── responsive.css
+│   │
+│   ├── js/
+│   │   ├── app.js
+│   │   ├── chat.js
+│   │   ├── sidebar.js
+│   │   └── auth.js
+│   │
+│   └── images/
+│       ├── logo.png
+│       ├── favicon.png
+│       ├── bot.png
+│       ├── user.png
+│       ├── welcome.png
+│       └── google.png
+│
+└── README.md
 ---
 
 # 📸 Application Screens
