@@ -112,9 +112,7 @@ Smart-FAQ-AI/
 
 # 📸 Application Screens
 
-(Add screenshots here)
 
-```
 Login Screen
 
 <img width="1567" height="933" alt="image" src="https://github.com/user-attachments/assets/6b535579-c44f-4ddd-a23f-44365f526652" />
@@ -129,7 +127,7 @@ Chat Screen
 
 <img width="1916" height="858" alt="image" src="https://github.com/user-attachments/assets/893c133b-b8b9-4941-a91c-7cf365c0fefb" />
 
-```
+
 
 ---
 
