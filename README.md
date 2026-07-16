@@ -107,6 +107,7 @@ Smart-FAQ-AI/
 │       └── google.png
 │
 └── README.md
+```
 ---
 
 # 📸 Application Screens
