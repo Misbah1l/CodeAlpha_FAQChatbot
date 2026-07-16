@@ -107,6 +107,20 @@ Smart_FAQ_AI/
 
 ---
 
+# 📸 Application Screens
+
+(Add screenshots here)
+
+```
+![Home Screen](screenshots/home.png)
+
+![Chat Screen](screenshots/chat.png)
+
+![Login Screen](screenshots/login.png)
+```
+
+---
+
 # ⚙️ Installation & Setup
 
 ### 1. Clone Repository
