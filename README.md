@@ -115,11 +115,20 @@ Smart-FAQ-AI/
 (Add screenshots here)
 
 ```
-![Home Screen](screenshots/home.png)
+Login Screen
 
-![Chat Screen](screenshots/chat.png)
+<img width="1567" height="933" alt="image" src="https://github.com/user-attachments/assets/6b535579-c44f-4ddd-a23f-44365f526652" />
 
-![Login Screen](screenshots/login.png)
+
+Home Screen
+
+<img width="1910" height="933" alt="image" src="https://github.com/user-attachments/assets/75a8e459-7d60-4de4-bc6e-cc3057b19efb" />
+
+
+Chat Screen
+
+<img width="1916" height="858" alt="image" src="https://github.com/user-attachments/assets/893c133b-b8b9-4941-a91c-7cf365c0fefb" />
+
 ```
 
 ---
