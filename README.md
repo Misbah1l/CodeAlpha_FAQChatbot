@@ -69,6 +69,8 @@ The chatbot comes with a modern ChatGPT-style interface including authentication
 ---
 
 # 📂 Project Structure
+
+```
 Smart-FAQ-AI/
 │
 ├── app.py
