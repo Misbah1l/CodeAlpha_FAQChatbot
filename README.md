@@ -133,22 +133,22 @@ Chat Screen
 
 # ⚙️ Installation & Setup
 
-### 1. Clone Repository
+## 1. Clone Repository
 
 ```
 git clone https://github.com/Misbah1l/CodeAlpha_FAQChatbot.git
 
 ```
-### 2. Open Project Folder
+## 2. Open Project Folder
 ```
 cd CodeAlpha_FAQChatbot
 ```  
-### 3. Install Dependencies
+## 3. Install Dependencies
 ```
 pip install -r requirements.txt
 ```
 
-### 4. ▶️ Run Application
+## 4. ▶️ Run Application
 
 Start Flask server:
 ```
@@ -160,14 +160,14 @@ Open browser:
 http://127.0.0.1:5000/
 ```
 ---
-🧠 How It Works
+# 🧠 How It Works
 User enters a question.
 Text is preprocessed using NLP techniques.
 TF-IDF converts text into numerical vectors.
 Cosine Similarity compares user input with stored FAQs.
 The chatbot returns the most relevant answer.
 
-📌 Example Questions
+# 📌 Example Questions
 What is Python?
 
 What is Machine Learning?
@@ -180,7 +180,7 @@ What is MongoDB?
 
 What is GitHub?
 
-🔮 Future Improvements
+# 🔮 Future Improvements
 Real Google OAuth Authentication
 Image and file understanding
 Voice output response
@@ -188,16 +188,16 @@ Larger FAQ dataset
 Deep Learning based chatbot model
 Database integration
 
-👩‍💻 Developer
+# 👩‍💻 Developer
 
 Misbah Saeed
 
 BS Computer Science Student
 
-GitHub:
+# GitHub:
 https://github.com/Misbah1l
 
 
-📜 License
+# 📜 License
 
 This project is developed for educational and internship purposes.
