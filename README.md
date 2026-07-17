@@ -139,11 +139,11 @@ Chat Screen
 git clone https://github.com/Misbah1l/CodeAlpha_FAQChatbot.git
 
 ```
-2. Open Project Folder
+### 2. Open Project Folder
 ```
 cd CodeAlpha_FAQChatbot
 ```  
-4. Install Dependencies
+### 3. Install Dependencies
 ```
 pip install -r requirements.txt
 ```
@@ -159,12 +159,14 @@ Open browser:
 ```
 http://127.0.0.1:5000/
 ```
+---
 🧠 How It Works
 User enters a question.
 Text is preprocessed using NLP techniques.
 TF-IDF converts text into numerical vectors.
 Cosine Similarity compares user input with stored FAQs.
 The chatbot returns the most relevant answer.
+---
 📌 Example Questions
 What is Python?
 
@@ -177,7 +179,7 @@ What is CodeAlpha?
 What is MongoDB?
 
 What is GitHub?
-
+---
 🔮 Future Improvements
 Real Google OAuth Authentication
 Image and file understanding
@@ -185,16 +187,17 @@ Voice output response
 Larger FAQ dataset
 Deep Learning based chatbot model
 Database integration
-
+---
 👩‍💻 Developer
 
 Misbah Saeed
 
 BS Computer Science Student
-
+---
 GitHub:
 https://github.com/Misbah1l
 
+---
 📜 License
 
 This project is developed for educational and internship purposes.
