@@ -133,22 +133,22 @@ Chat Screen
 
 # ⚙️ Installation & Setup
 
-## 1. Clone Repository
+1. Clone Repository
 
 ```
 git clone https://github.com/Misbah1l/CodeAlpha_FAQChatbot.git
 
 ```
-## 2. Open Project Folder
+2. Open Project Folder
 ```
 cd CodeAlpha_FAQChatbot
 ```  
-## 3. Install Dependencies
+3. Install Dependencies
 ```
 pip install -r requirements.txt
 ```
 
-## 4. ▶️ Run Application
+4. ▶️ Run Application
 
 Start Flask server:
 ```
